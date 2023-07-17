@@ -100,8 +100,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias old='cd /run/media/bruhexe/fedora_localhost-live/home00/bruhexe/'
-alias librewolf='flatpak run io.gitlab.librewolf-community'
-alias network='cinnamon-settings network'
+alias librewolf='flatpak run io.gitlab.librewolf-community &'
+alias network='cinnamon-settings network &'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/usr/lib/ccache/bin/:$PATH"
