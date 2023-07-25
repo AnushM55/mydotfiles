@@ -113,4 +113,4 @@ export TMC_LANGS_CONFIG_DIR='/home/bruhexe/tmc-config'
 fpath=(/home/bruhexe/.local/share/tmc-autocomplete/_tmc  $fpath)
 compdef _tmc tmc
 alias mooc=' cd ~/.local/share/tmc/tmc_cli_rust/mooc-java-programming-i/ '
-alias stacer='cd ~/Downloads && ./Stacer-1.1.0-x64.AppImage'
+alias stacer='~/Downloads/Stacer-1.1.0-x64.AppImage  &'
