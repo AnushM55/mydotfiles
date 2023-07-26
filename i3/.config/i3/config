@@ -521,7 +521,7 @@ for_window [class="urxvt"] border pixel 1
 ######################################
 
 # Define colors variables:
-set $darkbluetrans	#08052b
+set $darkbluetrans	#08052be6
 set $darkblue		#08052b
 set $lightblue		#5294e2
 set $urgentred		#e53935
@@ -652,4 +652,4 @@ bindsym $mod+shift+return exec --no-startup-id  $HOME/.config/polybar/network.sh
  # Hides vertical and horizontal borders when there's only one window.
  hide_edge_borders both
 
-exec --no-startup-id  nitrogen --set-scaled ~/Desktop/wallpaper1.png
+exec --no-startup-id  nitrogen --set-scaled ~/wall.png
