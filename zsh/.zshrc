@@ -107,10 +107,8 @@ alias network='cinnamon-settings network &'
 export PATH="/usr/lib/ccache/bin/:$PATH"
 alias htdocs=' cd /opt/lampp/htdocs/ && sudo su'
 export PATH="/home/bruhexe/clangd_16.0.2/bin:$PATH"
-alias floorp="/opt/floorp/floorp &"
 alias tmc='/home/bruhexe/tmc-cli-rust-x86_64-unknown-linux-gnu-v1.1.1'
 export TMC_LANGS_CONFIG_DIR='/home/bruhexe/tmc-config'
 fpath=(/home/bruhexe/.local/share/tmc-autocomplete/_tmc  $fpath)
 compdef _tmc tmc
 alias mooc=' cd ~/.local/share/tmc/tmc_cli_rust/mooc-java-programming-i/ '
-alias stacer='~/Downloads/Stacer-1.1.0-x64.AppImage  &'
