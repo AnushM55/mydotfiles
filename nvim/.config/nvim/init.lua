@@ -80,7 +80,6 @@ require('lazy').setup({
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
       { 'williamboman/mason.nvim', config = true },
-      
 
 
       'williamboman/mason-lspconfig.nvim',
@@ -138,14 +137,16 @@ require('lazy').setup({
   },
 
   {
-    -- Theme inspired by Atom
-    'navarasu/onedark.nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'onedark'
-    end,
-  },
-
+--   Theme inspired by Atom
+  --'navarasu/onedark.nvim',
+  {
+  "folke/tokyonight.nvim",
+  lazy = false,
+  priority = 1000,
+  opts = {},
+},
+--  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+	},
   {
     -- Set lualine as statusline
     'nvim-lualine/lualine.nvim',
@@ -542,3 +543,6 @@ cmp.setup {
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+vim.cmd 'colorscheme tokyonight'
+
+--vim.cmd 'colorscheme catppuccin-mocha'
