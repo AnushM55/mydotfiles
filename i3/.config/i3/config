@@ -652,4 +652,5 @@ bindsym $mod+shift+return exec --no-startup-id  $HOME/.config/polybar/network.sh
  # Hides vertical and horizontal borders when there's only one window.
  hide_edge_borders both
 
-exec --no-startup-id  nitrogen --set-scaled ~/Pictures/evil.png
+#exec --no-startup-id  nitrogen --set-scaled ~/Pictures/evil.png
+exec --no-startup-id  nitrogen --set-scaled ~/dotfiles/assets/wakl.jpg
