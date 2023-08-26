@@ -1,11 +1,6 @@
-#If you come from bash you might have to change your $PATH.
+# If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-#If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
-
-force_color_prompt=yes
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -34,8 +29,6 @@ ZSH_THEME="robbyrussell"
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
-
-
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
@@ -79,7 +72,7 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-#source $ZSH/oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -106,13 +99,5 @@ plugins=(git)
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias old='cd /run/media/bruhexe/fedora_localhost-live/home00/bruhexe/'
 alias librewolf='flatpak run io.gitlab.librewolf-community &'
-alias network='cinnamon-settings network &'
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-export PATH="/usr/lib/ccache/bin/:$PATH"
-alias htdocs=' cd /opt/lampp/htdocs/ && sudo su'
-export PATH="/home/bruhexe/clangd_16.0.2/bin:$PATH"
-alias tmc='/home/bruhexe/tmc-cli-rust-x86_64-unknown-linux-gnu-v1.1.1'
 alias mooc=' cd ~/.local/share/tmc/tmc_cli_rust/mooc-java-programming-i/ '
