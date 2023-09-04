@@ -106,9 +106,10 @@ default_border pixel 1
 # hide_edge_borders both
 
 # Set inner/outer gaps
-gaps inner 3
-gaps outer 3
-gaps top 3
+gaps inner 2
+gaps outer 1
+gaps top 0
+gaps bottom 25
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
 
@@ -224,7 +225,7 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec kitty 
 
 # kill focused window
 bindsym $mod+q kill
@@ -251,13 +252,14 @@ bindsym F1 exec ~/.config/i3/scripts/keyhint-2
 # bindsym $mod+F1 exec xed ~/.config/i3/keybindings
 
 # Backlight control
-bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
-bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+bindsym XF86MonBrightnessDown exec brightnessctl set 1%-
+bindsym XF86MonBrightnessUp exec brightnessctl set +1%
 
 # change focus
 bindsym $mod+j focus left
 bindsym $mod+k focus down
-bindsym $mod+b focus up
+#bindsym $mod+b focus up
+bindsym $mod+b exec kitty -e nmtui&
 bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
@@ -285,7 +287,8 @@ bindsym $mod+h split h
 bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+#bindsym $mod+f fullscreen toggle 
+bindsym $mod+f exec bash ~/.config/i3/scripts/fullscreen.sh
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
@@ -612,9 +615,9 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
-bindsym $mod+d exec rofi -modi window#drun -theme solarised -show drun
+bindsym $mod+d exec rofi -modi drun window#drun -theme purple -show drun
 
-#bindsym F9 exec rofi -modi drun -show drun \
+#bindsym F9 exec rofi -modi run -show run \
 #		-config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
@@ -653,4 +656,5 @@ bindsym $mod+shift+return exec --no-startup-id  $HOME/.config/polybar/network.sh
  hide_edge_borders both
 
 #exec --no-startup-id  nitrogen --set-scaled ~/Pictures/evil.png
-exec --no-startup-id  nitrogen --set-scaled ~/dotfiles/assets/wakl.jpg
+exec --no-startup-id  nitrogen --set-scaled ~/moidotfiles/assets/wakl.jpg
+#exec xrandr --dpi 220

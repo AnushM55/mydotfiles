@@ -3,7 +3,7 @@
  * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
-    font:            "Noto Sans Regular 10";
+    font:            "Noto Sans Regular 17";
     show-icons:      false;
     icon-theme:      "Qogir";
     scroll-method:   0;
@@ -15,13 +15,12 @@ configuration {
 
 window {
     background-color: @background;
-    border:           0;
+    border:           1;
     padding:          10;
     transparency:     "real";
-    width:            120px;
+    width:            220px;
     location:         east;
     /*y-offset:       18;*/
-    /*x-offset:       850;*/
 }
 listview {
     lines:     7;
@@ -81,7 +80,7 @@ scrollbar {
 }
 mode-switcher {
     border:       2px 0px 0px;
-    border-color: @separatorcolor;
+    border-color: inherit;
 }
 button {
     spacing:    0;
