@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+[ -d /usr/lib/floorp ] && sudo rm -r /usr/lib/floorp
+[ -f ~/Desktop/floorp.desktop ] && sudo rm ~/Desktop/floorp.desktop 
+[ -f /usr/share/applications/floorp.desktop ] && sudo rm /usr/share/applications/floorp.desktop 
+
+
 read -p "Enter version : " ver
 arch=$( lscpu | grep Architecture: | awk '{print $2}' )
 wget https://github.com/Floorp-Projects/Floorp/releases/download/v$ver/floorp-$ver.linux-$arch.tar.bz2
@@ -15,6 +20,5 @@ echo -e "[Desktop Entry]\nVersion=1.0\nName=Floorp\nGenericName=Web Browser\nCom
 sudo cp ~/Desktop/floorp.desktop /usr/share/applications/
 
 [ ! -z /usr/lib/floorp/floorp ] && chmod +x /usr/lib/floorp/floorp
+rm floorp-$ver.linux-$arch.tar.bz2
 
-rm floorp-11.3.3.linux-x86_64.tar.bz2
-rm -r floorp

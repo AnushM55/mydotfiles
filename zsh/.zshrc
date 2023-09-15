@@ -102,3 +102,4 @@ source $ZSH/oh-my-zsh.sh
 alias librewolf='flatpak run io.gitlab.librewolf-community &'
 alias mooc=' cd ~/.local/share/tmc/tmc_cli_rust/mooc-java-programming-i/ '
 export PATH=/usr/local/bin:/usr/bin:/usr/local/sbin:/var/lib/flatpak/exports/bin:/usr/lib/jvm/default/bin:/usr/bin/site_perl:/usr/bin/vendor_perl:/usr/bin/core_perl:/var/lib/snapd/snap/bin:/home/anuwasted/payload-dumper-go
+alias floorp='/usr/lib/floorp/floorp' 
