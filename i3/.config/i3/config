@@ -657,5 +657,5 @@ bindsym $mod+shift+return exec --no-startup-id  $HOME/.config/polybar/network.sh
  hide_edge_borders both
 
 #exec --no-startup-id  nitrogen --set-scaled ~/Pictures/evil.png
-exec --no-startup-id  nitrogen --set-scaled ~/mydotfiles/assets/wakl.jpg
+exec --no-startup-id  nitrogen --set-scaled ~/mydotfiles/assets/street_blues.png
 #exec xrandr --dpi 220
