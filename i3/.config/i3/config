@@ -307,7 +307,7 @@ bindsym $mod+a focus parent
 
 # open new empty workspace
 bindsym $mod+Shift+n exec ~/.config/i3/scripts/empty_workspace
-
+bindsym $mod+Ctrl+n exec ~/mydotfiles/rofi-network-manager/rofi-network-manager.sh &
 # Multimedia Keys
 
 # volume
@@ -525,7 +525,7 @@ for_window [class="urxvt"] border pixel 1
 ######################################
 
 # Define colors variables:
-set $darkbluetrans	#08052be6
+set $darkbluetrans	#08052b
 set $darkblue		#08052b
 set $lightblue		#5294e2
 set $urgentred		#e53935
@@ -540,7 +540,7 @@ set $yellowbrown	#e1b700
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    	$purple $purple $white		$mediumgrey	$mediumgrey
+client.focused		    	$lightblue	$lightblue	$white		$mediumgrey	$mediumgrey
 client.unfocused	    	$deepPurple 	$deepPurple 	 $grey		$darkgrey	$darkgrey
 client.focused_inactive		$deepPurple 	 $deepPurple 		$grey		$black		$black
 client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
