@@ -109,7 +109,7 @@ default_border pixel 1
 gaps inner 2
 gaps outer 1
 gaps top 0
-gaps bottom 25
+gaps bottom 1
 # show window title bars (not officially supported with i3gaps)
 #default_border normal
 
