@@ -226,7 +226,7 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -244,7 +244,8 @@ bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to update i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+r restart 
+
 
 # keybinding in fancy rofi (automated):
 bindsym F1 exec ~/.config/i3/scripts/keyhint-2
@@ -657,5 +658,9 @@ bindsym $mod+shift+return exec --no-startup-id  $HOME/.config/polybar/network.sh
  hide_edge_borders both
 
 #exec --no-startup-id  nitrogen --set-scaled ~/Pictures/evil.png
-exec --no-startup-id  nitrogen --set-scaled ~/mydotfiles/assets/street_blues.png
+#exec --no-startup-id  nitrogen --set-scaled ~/mydotfiles/assets/taiwan.jpg
+exec --no-startup-id feh --randomize --bg-scale ~/mydotfiles/assets/*
+bindsym $mod+Shift+w exec --no-startup-id feh ~/mydotfiles/assets/* --recursive --randomize --bg-fill
+
+
 #exec xrandr --dpi 220
