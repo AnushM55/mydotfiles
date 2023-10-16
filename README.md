@@ -1,4 +1,4 @@
-![Alt text](assets/nightu.png "Wallpaper")
+![Alt text](assets/nightu.jpg "Wallpaper")
  ``` **moidotfiles** ```
 managed using stow
 
