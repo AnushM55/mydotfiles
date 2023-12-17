@@ -65,24 +65,26 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: First, some plugins that don't require any configuration
 
+  spec = {
+    { 'LazyVim/LazyVim', import = 'lazyvim.plugins' },
+    { import = 'lazyvim.plugins.extras.lang.rust' },
+  },
   -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
 
   -- Detect tabstop and shiftwidth automatically
-  'tpope/vim-sleuth',
 
   -- NOTE: This is where your plugins related to LSP can be installed.
   --  The configuration is done below. Search for lspconfig to find it below.
+
   {
     -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
       -- Automatically install LSPs to stdpath for neovim
-      { 'williamboman/mason.nvim', config = true },
-
-
-      'williamboman/mason-lspconfig.nvim',
+      --      { 'williamboman/mason.nvim', config = true },
+      --     'williamboman/mason-lspconfig.nvim',
 
       -- Useful status updates for LSP
       -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
@@ -112,7 +114,7 @@ require('lazy').setup({
   --javastuff
   {
 
-'mfussenegger/nvim-jdtls',
+    'mfussenegger/nvim-jdtls',
   },
   -- Useful plugin to show you pending keybinds.
   { 'folke/which-key.nvim', opts = {} },
@@ -137,27 +139,27 @@ require('lazy').setup({
   },
 
   {
---   Theme inspired by Atom
-  --'navarasu/onedark.nvim',
- -- {
- -- "folke/tokyonight.nvim",
- -- lazy = false,
- -- priority = 1000,
---  opts = {},
---},
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
-  --{ "Shatur/neovim-ayu", name = "ayu", priority = 1000 }
---	  { 'rose-pine/neovim', name = 'rose-pine' }
---{
---  'uloco/bluloco.nvim',
-  --lazy = false,
-  --priority = 1000,
-  --dependencies = { 'rktjmp/lush.nvim' },
-  --config = function()
+    --   Theme inspired by Atom
+    --'navarasu/onedark.nvim',
+    -- {
+    -- "folke/tokyonight.nvim",
+    -- lazy = false,
+    -- priority = 1000,
+    --  opts = {},
+    --},
+    { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+    --{ "Shatur/neovim-ayu", name = "ayu", priority = 1000 }
+    --	  { 'rose-pine/neovim', name = 'rose-pine' }
+    --{
+    --  'uloco/bluloco.nvim',
+    --lazy = false,
+    --priority = 1000,
+    --dependencies = { 'rktjmp/lush.nvim' },
+    --config = function()
     -- your optional config goes here, see below.
-  --end,
---}
---  {'rebelot/kanagawa.nvim', name ='kanagawa', priority = 1000}
+    --end,
+    --}
+    --  {'rebelot/kanagawa.nvim', name ='kanagawa', priority = 1000}
   },
   {
     -- Set lualine as statusline
@@ -175,13 +177,23 @@ require('lazy').setup({
 
   {
     -- Add indentation guides even on blank lines
-    'lukas-reineke/indent-blankline.nvim',
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help indent_blankline.txt`
     opts = {
       char = '┊',
       show_trailing_blankline_indent = false,
     },
+  },
+  {
+    opts = {
+      -- regular opts
+    },
+    config = function(_, opts)
+      require('notify').setup(vim.tbl_extend('keep', {
+        -- other stuff
+        background_colour = '#000000',
+      }, opts))
+    end,
   },
 
   -- "gc" to comment visual regions/lines
@@ -402,7 +414,7 @@ local on_attach = function(_, bufnr)
   -- to define small helper and utility functions so you don't have to repeat yourself
   -- many times.
   --
-  -- In this case, we create a function that lets us more easily define mappings specific
+  -- In this case, we create a function that lets us more easily define mappings pepecific
   -- for LSP related items. It sets the mode, buffer and description for us each time.
   local nmap = function(keys, func, desc)
     if desc then
@@ -545,22 +557,14 @@ cmp.setup {
 
 --call plug#end()
 
-
-
 -- Set colorscheme after options
-
-
-
-
-
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
 --vim.cmd 'colorscheme tokyonight'
 --vim.cmd 'colorscheme rose-pine'
 --vim.cmd 'colorscheme ayu'
-vim.opt.termguicolors  = true
-vim.cmd 'colorscheme catppuccin-mocha'
+vim.opt.termguicolors = true
 --require("bluloco").setup({
 --  style = "dark",               -- "auto" | "dark" | "light"
 --  italics = true,
@@ -596,10 +600,8 @@ vim.cmd 'colorscheme catppuccin-mocha'
 
 -- setup must be called before loading
 
-
 --vim.cmd('colorscheme kanagawa')
-vim.cmd('highlight Normal guibg=none')
- vim.cmd('highlight NonText guibg=none')
- vim.cmd('highlight Normal ctermbg=none')
- vim.cmd('highlight NonText ctermbg=none')
-
+vim.cmd 'highlight Normal guibg=none'
+vim.cmd 'highlight NonText guibg=none'
+vim.cmd 'highlight Normal ctermbg=none'
+vim.cmd 'highlight NonText ctermbg=none'

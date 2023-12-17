@@ -1,0 +1,4 @@
+[default]
+path = "~/mydotfiles/assets/wallpapers/"
+duration = "1000m"
+sorting = "descending"

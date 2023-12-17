@@ -5,6 +5,12 @@ set nocompatible
 " Helps force plugins to load correctly when it is turned back on below
 filetype off
 
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
 " TODO: Load plugins here (pathogen or vundle)
 call plug#begin()
 Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
@@ -13,6 +19,7 @@ Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 " Use release branch (recommended)
  Plug 'neoclide/coc.nvim', {'branch': 'release'}
  Plug 'mfussenegger/nvim-jdtls'
+ Plug 'rust-lang/rust.vim'
 call plug#end()
 
 
@@ -59,9 +66,9 @@ set encoding=utf-8
 set wrap
 set textwidth=79
 set formatoptions=tcqrn1
-set tabstop=2
-set shiftwidth=2
-set softtabstop=2
+set tabstop=8
+set shiftwidth=8
+set softtabstop=8
 set expandtab
 set noshiftround
 
@@ -119,11 +126,11 @@ map <leader>l :set list!<CR> " Toggle tabs and EOL
 set t_Co=256
 set background=dark
 let g:hybrid_termcolors=256
-let g:hybrid_termtrans=1
+let g:hybrid_termtrans=0
 " put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
 " in ~/.vim/colors/ and uncomment:
-colorscheme Tomorrow-Night
-"colorscheme Tomorrow-Night
+""colorscheme Tomorrow-Night
+colorscheme tokyonight-night
 hi Normal ctermbg=none
 
 

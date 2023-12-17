@@ -1,0 +1,140 @@
+@define-color white      #F2F2F2;
+@define-color black      #000203;
+@define-color text       #BECBCB;
+@define-color lightgray  #686868;
+@define-color darkgray   #353535;
+@define-color red        #F38BA8;
+@define-color pinkshit  rgba(219,62,177,1.14);
+
+@define-color black-transparent rgba(0, 0, 0, 1.0);
+
+* {
+  font-family: Iosevka, Material Design Icons Desktop;
+  font-size: 16px;
+}
+
+window#waybar {
+  background-color: @black-transparent;
+  color: @text;
+  border-radius: 7px;
+  border: 1px solid @pinkshit;
+  /* border: 1px solid rgba(0, 0, 0, 0.0); */
+}
+
+tooltip {
+  background: @black-solid;
+  border: 1px solid @darkgray;
+  border-radius: 7px;
+}
+tooltip label {
+  color: @text;
+}
+
+#workspaces {
+  /* border: 1px solid #10171b; */
+  /* border-radius: 20px; */
+  /* margin-top: 0; */
+  /* margin-bottom: 0; */
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#workspaces button {
+  background-color: transparent;
+  color: @lightgray;
+  padding: 0;
+  /* margin: 0; */
+  margin-top: 3px;
+  margin-bottom: 3px;
+  /* margin-left: 1px;
+  margin-right: 1px; */
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+#workspaces button:hover {
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.0);
+  color: @white;
+  transition: all 0.3s ease;
+}
+
+#workspaces button.focused,
+#workspaces button.active {
+  /* background-color: @darkgray; */
+  /* border: 1px solid @darkgray; */
+  color: @white;
+  transition: all 0.3s ease;
+  animation: colored-gradient 10s ease infinite;
+}
+
+/* #workspaces button.focused:hover,
+#workspaces button.active:hover {
+  background-color: @white;
+  transition: all 1s ease;
+} */
+
+#workspaces button.urgent {
+  background-color: @red;
+  color: @black;
+  transition: all 0.3s ease;
+}
+
+/* #workspaces button.hidden {} */
+
+
+/* #taskbar button.maximized {} */
+
+/* #taskbar button.minimized {} */
+
+
+/* #taskbar button.fullscreen {} */
+
+/* -------------------------------------------------------------------------------- */
+
+#submap,
+#mode,
+#tray,
+#cpu,
+#memory,
+#backlight,
+#pulseaudio.audio,
+#pulseaudio.microphone,
+#network.wlo1,
+#network.eno1,
+#bluetooth,
+#battery,
+#clock,
+#custom-powermenu,
+#custom-notification {
+  background-color: transparent;
+  color: @text;
+  padding: 1px 8px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+  /* border: 1px solid @darkgray; */
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+#submap {
+  border: 0;
+}
+
+/* -------------------------------------------------------------------------------- */
+
+#tray {
+  background-color: transparent;
+  padding: 1px 8px;
+}
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: @red;
+}

@@ -1,7 +1,7 @@
 
 
 # BEGIN_KITTY_THEME
-## Catppuccin-Mocha
-background_opacity 0.8
-include Alucard.conf
+# Alucard
+include current-theme.conf
+background_opacity 0.1
 # END_KITTY_THEME
