@@ -7,22 +7,28 @@ assignees: ''
 
 ---
 
-<!-- Any bug report not following this template will be immediately closed. Thanks -->
+<!-- Before reporting: update nvchad to the latest version,read breaking changes page,search existing issues. -->
 
-## Describe the bug
-<!-- A clear and concise description of what the bug is. -->
+**Describe the bug**
+A clear and concise description of what the bug is.
 
-## To Reproduce
-<!-- Steps to reproduce the behavior. -->
-1. ...
+**To Reproduce**
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-## Desktop
-<!-- please complete the following information. -->
-- OS: 
-- Terminal: 
+**Expected behavior**
+A clear and concise description of what you expected to happen.
 
-## Neovim Version
-<!-- Output of running `:version` from inside of neovim. -->
+**Screenshots**
+If applicable, add screenshots to help explain your problem.
 
-```
-```
+**Desktop (please complete the following information):**
+ - Operating System
+ - Terminal
+ - Version of Neovim
+
+**Additional context**
+Add any other context about the problem here.

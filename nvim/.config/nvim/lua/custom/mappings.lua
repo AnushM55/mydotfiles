@@ -21,7 +21,8 @@ M.dap = {
 M.dap_go = {
   plugin = true,
   n = {
-    ["<leader>dgt"] = {      function()
+    ["<leader>dgt"] = {
+      function()
         require('dap-go').debug_test()
       end,
       "Debug go test"
